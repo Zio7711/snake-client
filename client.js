@@ -5,6 +5,12 @@ const connect = () => {
     port: 50542
   });
   conn.setEncoding("utf8");
+  conn.on("connect", () => {
+    console.log("Successfully connected to game server");
+    conn.write("Name: Zio");
+    // conn.write("Move: up");
+    // setInterval(() => conn.write("Move: left"), 50);
+  });
   return conn;
 };
 module.exports = connect;
