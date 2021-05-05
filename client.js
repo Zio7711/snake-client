@@ -10,7 +10,8 @@ const connect = () => {
     conn.write("Name: Zio");
     // conn.write("Move: up");
     // setInterval(() => conn.write("Move: left"), 50);
+    conn.on('data',(message) => console.log(`The server says: ${message}`))
   });
   return conn;
 };
-module.exports = connect;
+module.exports = {connect};
