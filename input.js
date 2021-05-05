@@ -28,6 +28,8 @@ const handleUserInput = (key) => {
   } else if (key === "d") {
     clearInterval(interval);
     interval = setInterval(() => connection.write('Move: right'), 50);
+  } else {
+    connection.write('Say: NamNam')
   }
 };
 
