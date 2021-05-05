@@ -28,7 +28,7 @@ const handleUserInput = (key) => {
   } else if (key === "d") {
     clearInterval(interval);
     interval = setInterval(() => connection.write('Move: right'), 50);
-  } 
+  }
 };
 
 module.exports = {setupInput};
