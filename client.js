@@ -7,24 +7,4 @@ const connect = () => {
   conn.setEncoding("utf8");
   return conn;
 };
-
-console.log("Connecting ...");
-
-// connect();
-const myNumber = 7711;
-const myString = "Zio";
-
-module.exports = {
-  myNumber,
-  myString,
-  connect
-}
-
-/* conn.on("event name", () => {
-
-});
-
-conn.on("connect", () => {
-
-});
- */
+module.exports = connect;
